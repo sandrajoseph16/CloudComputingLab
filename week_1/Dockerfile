@@ -1,15 +1,4 @@
 # Code Lab 1
-# Reference links: 
-# https://stackoverflow.com/questions/14093452/grep-only-the-first-match-and-stop
-# https://phoenixnap.com/kb/docker-run-command-with-examples
-# To run this file 
-# the container in interactive mode. Use the following commands:
-# docker build -t codelab1 
-# docker container run -it codelab1 /bin/bash
-# ls
-# pwd
-# cat company.txt
-
 # 1. Setup a docker container
 FROM python:latest
 WORKDIR /usr/src/codelab1
