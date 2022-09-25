@@ -1,3 +1,7 @@
+Reference links: 
+https://stackoverflow.com/questions/14093452/grep-only-the-first-match-and-stop
+https://phoenixnap.com/kb/docker-run-command-with-examples
+
 1. To configure the docker and run the container use the following commands:<br />
 docker build -t codelab1 <br />
 docker run codelab1
