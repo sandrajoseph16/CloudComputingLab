@@ -5,6 +5,6 @@ docker run codelab1
 2. To run the container in interactive mode. Use the following commands:<br />
 docker build -t codelab1 <br />
 docker container run -it codelab1 /bin/bash <br />
-# ls <br />
-# pwd <br />
-# cat company.txt <br />
+ls <br />
+pwd <br />
+cat company.txt <br />
