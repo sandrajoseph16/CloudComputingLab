@@ -1,0 +1,47 @@
+(base) Sandras-MacBook-Pro-3:week_1 sandrajoseph$ docker build -t codelab1 .
+[+] Building 2.7s (10/10) FINISHED                                                                                                                                                                                               
+ => [internal] load build definition from Dockerfile                                                                                                                                                                        0.0s
+ => => transferring dockerfile: 37B                                                                                                                                                                                         0.0s
+ => [internal] load .dockerignore                                                                                                                                                                                           0.0s
+ => => transferring context: 2B                                                                                                                                                                                             0.0s
+ => [internal] load metadata for docker.io/library/python:latest                                                                                                                                                            2.6s
+ => [1/6] FROM docker.io/library/python:latest@sha256:e9c35537103a2801a30b15a77d4a56b35532c964489b125ec1ff24f3d5b53409                                                                                                      0.0s
+ => CACHED [2/6] WORKDIR /usr/src/codelab1                                                                                                                                                                                  0.0s
+ => CACHED [3/6] RUN apt-get update                                                                                                                                                                                         0.0s
+ => CACHED [4/6] RUN apt-get install -y wget                                                                                                                                                                                0.0s
+ => CACHED [5/6] RUN wget https://raw.githubusercontent.com/mschermann/forensic_accounting/master/fb_sub.csv                                                                                                                0.0s
+ => CACHED [6/6] RUN grep -o -m 1 "\w* INC\b" fb_sub.csv > company.txt                                                                                                                                                      0.0s
+ => exporting to image                                                                                                                                                                                                      0.0s
+ => => exporting layers                                                                                                                                                                                                     0.0s
+ => => writing image sha256:1b2f21fce2a002e2f48810a186d7cc919bd97ba9a6775e3b1645061b39bff743                                                                                                                                0.0s
+ => => naming to docker.io/library/codelab1                                                                                                                                                                                 0.0s
+
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+(base) Sandras-MacBook-Pro-3:week_1 sandrajoseph$ docker run codelab1
+FACEBOOK INC
+(base) Sandras-MacBook-Pro-3:week_1 sandrajoseph$ docker build -t codelab1 .
+[+] Building 1.2s (10/10) FINISHED                                                                                                                                                                                               
+ => [internal] load build definition from Dockerfile                                                                                                                                                                        0.0s
+ => => transferring dockerfile: 37B                                                                                                                                                                                         0.0s
+ => [internal] load .dockerignore                                                                                                                                                                                           0.0s
+ => => transferring context: 2B                                                                                                                                                                                             0.0s
+ => [internal] load metadata for docker.io/library/python:latest                                                                                                                                                            1.1s
+ => [1/6] FROM docker.io/library/python:latest@sha256:e9c35537103a2801a30b15a77d4a56b35532c964489b125ec1ff24f3d5b53409                                                                                                      0.0s
+ => CACHED [2/6] WORKDIR /usr/src/codelab1                                                                                                                                                                                  0.0s
+ => CACHED [3/6] RUN apt-get update                                                                                                                                                                                         0.0s
+ => CACHED [4/6] RUN apt-get install -y wget                                                                                                                                                                                0.0s
+ => CACHED [5/6] RUN wget https://raw.githubusercontent.com/mschermann/forensic_accounting/master/fb_sub.csv                                                                                                                0.0s
+ => CACHED [6/6] RUN grep -o -m 1 "\w* INC\b" fb_sub.csv > company.txt                                                                                                                                                      0.0s
+ => exporting to image                                                                                                                                                                                                      0.0s
+ => => exporting layers                                                                                                                                                                                                     0.0s
+ => => writing image sha256:1b2f21fce2a002e2f48810a186d7cc919bd97ba9a6775e3b1645061b39bff743                                                                                                                                0.0s
+ => => naming to docker.io/library/codelab1                                                                                                                                                                                 0.0s
+
+Use 'docker scan' to run Snyk tests against images to find vulnerabilities and learn how to fix them
+(base) Sandras-MacBook-Pro-3:week_1 sandrajoseph$ docker container run -it codelab1 /bin/bash
+root@16ee6001ef55:/usr/src/codelab1# ls
+company.txt  fb_sub.csv
+root@16ee6001ef55:/usr/src/codelab1# pwd
+/usr/src/codelab1
+root@16ee6001ef55:/usr/src/codelab1# cat company.txt
+FACEBOOK INC
