@@ -1,9 +1,9 @@
 ## Reference links: 
-https://stackoverflow.com/questions/14093452/grep-only-the-first-match-and-stop
-https://stackoverflow.com/questions/27701930/how-to-add-users-to-docker-container
-https://askubuntu.com/questions/487527/give-specific-user-permission-to-write-to-a-folder-using-w-notation
-https://stackoverflow.com/questions/22049212/docker-copying-files-from-docker-container-to-host
-https://www.geeksforgeeks.org/copying-files-to-and-from-docker-containers/
+<br>https://stackoverflow.com/questions/14093452/grep-only-the-first-match-and-stop <\br>
+<br>https://stackoverflow.com/questions/27701930/how-to-add-users-to-docker-container <\br>
+<br>https://askubuntu.com/questions/487527/give-specific-user-permission-to-write-to-a-folder-using-w-notation <\br>
+<br>https://stackoverflow.com/questions/22049212/docker-copying-files-from-docker-container-to-host <\br>
+<br>https://www.geeksforgeeks.org/copying-files-to-and-from-docker-containers/<\br>
 
 ## How to create a requirements.txt file from docker
 - Run the docker file without the requirements.txt file 
