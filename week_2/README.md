@@ -36,12 +36,12 @@ pip freeze > requirements.txt
 docker cp <container-id>:app/notebooks/requirements.txt .
 ```
 
-## How to run the Jupyter notebook on Docker container
-- To build the docker
+## How to run the Jupyter notebook on Docker container.
+- To build the docker:
 ```sh
 docker build -t my_jupyter .
 ```
-- To run the docker container
+- To run the docker container:
 ```sh
 docker run -p8888:8888 my_jupyter
 ```
@@ -51,7 +51,7 @@ docker run -p8888:8888 my_jupyter
 ## To Check ownership of the files in the docker directory
 - Check Jupyter notebook's cell first code cell
 OR
-- Launch terminal and change directory to the docker file location. And run the following commands
+- Launch terminal and change directory to the docker file location. And run the following commands.
 To view the container name running:
 ```sh
 docker ps -a
