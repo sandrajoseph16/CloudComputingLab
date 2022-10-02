@@ -7,10 +7,12 @@ https://www.geeksforgeeks.org/copying-files-to-and-from-docker-containers/
 
 ## How to create a requirements.txt file from docker
 - Run the docker file without the requirements.txt file 
-- docker build -t my_jupyter .
-- docker run -p8888:8888 my_jupyter
+```sh
+docker build -t my_jupyter .
+docker run -p8888:8888 my_jupyter
+```
 - Open notebook using the link on the terminal.
-- Run the jupyter notebook and see the missing packages
+- Run the jupyter notebook and view the missing packages
 - Launch another terminal and change directory to the docker file location. We will use this terminal to install the missing packages using root user.
 To view the dockers running:
 ```sh
@@ -42,4 +44,19 @@ docker build -t my_jupyter .
 - To run the docker container
 ```sh
 docker run -p8888:8888 my_jupyter
+```
+- Navigate to the notebooks folder in the jupyter tree 
+- Open FinalProject.ipynb file
+
+## To Check ownership of the files in the docker directory
+- Check Jupyter notebook's cell first code cell
+OR
+- Launch terminal and change directory to the docker file location. And run the following commands
+To view the container name running:
+```sh
+docker ps -a
+```
+To execute a command:
+```sh
+docker exec -u sjoseph <container-name> ls -l /app/notebooks
 ```

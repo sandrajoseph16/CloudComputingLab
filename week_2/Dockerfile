@@ -6,23 +6,25 @@ USER root
 WORKDIR /app
 RUN pip3 install jupyter
 
-# from local folder copy requirements.txt to working directory
-COPY requirements.txt /app
+# from local folder copy requirements.txt to working directory and install the packages
+COPY requirements.txt /app/
 RUN pip3 install -r requirements.txt
 
-# Create new folder and use wget to save files into this new folder
-RUN apt-get update 
-RUN apt-get install -y wget
-RUN mkdir notebooks
-RUN cd notebooks
+# create the new user and create a new directory
+ENV JUPYTER_USER sjoseph 
+RUN useradd -ms /bin/bash $JUPYTER_USER
+RUN apt-get update && apt-get install -y wget 
+RUN mkdir notebooks 
+
+# Create new folder and use wget to save files into this new directory
 RUN wget -P notebooks/ https://raw.githubusercontent.com/sandrajoseph16/CloudComputingLab/main/week_2/FinalProject.ipynb
 RUN wget -P notebooks/ https://raw.githubusercontent.com/sandrajoseph16/CloudComputingLab/main/week_2/marketing_campaign.csv 
 
-# create the new user and make them the owner of this new notebooks directory
-ENV JUPYTER_USER sjoseph 
-RUN useradd -ms /bin/bash ${JUPYTER_USER} 
-RUN chown $JUPYTER_USER:$JUPYTER_USER /app/notebooks
+# set new user as the owner of all the files in the new directory
+RUN chown -R $JUPYTER_USER:$JUPYTER_USER /app/notebooks
+RUN chmod 755 /app/notebooks
 EXPOSE 8888
+
 # change user to the new user created.
 USER ${JUPYTER_USER}
 # run jupyter notebook on localhost
