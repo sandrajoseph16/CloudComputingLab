@@ -1,4 +1,4 @@
-## How to run three components, a Database, a database Admin and a web frontend using Django
+## How to run three components, a Database, a database Admin and a web frontend on a Docker
 
 - Create a docker network for components to communicate with each other.
 ```sh
