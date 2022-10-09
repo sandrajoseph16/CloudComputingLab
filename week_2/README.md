@@ -1,10 +1,3 @@
-## Reference links: 
-https://stackoverflow.com/questions/14093452/grep-only-the-first-match-and-stop
-https://stackoverflow.com/questions/27701930/how-to-add-users-to-docker-container
-https://askubuntu.com/questions/487527/give-specific-user-permission-to-write-to-a-folder-using-w-notation
-https://stackoverflow.com/questions/22049212/docker-copying-files-from-docker-container-to-host
-https://www.geeksforgeeks.org/copying-files-to-and-from-docker-containers/
-
 ## How to create a requirements.txt file from docker
 - Run the docker file without the requirements.txt file 
 ```sh
@@ -36,12 +29,12 @@ pip freeze > requirements.txt
 docker cp <container-id>:app/notebooks/requirements.txt .
 ```
 
-## How to run the Jupyter notebook on Docker container
-- To build the docker
+## How to run the Jupyter notebook on Docker container.
+- To build the docker:
 ```sh
 docker build -t my_jupyter .
 ```
-- To run the docker container
+- To run the docker container:
 ```sh
 docker run -p8888:8888 my_jupyter
 ```
@@ -51,7 +44,7 @@ docker run -p8888:8888 my_jupyter
 ## To Check ownership of the files in the docker directory
 - Check Jupyter notebook's cell first code cell
 OR
-- Launch terminal and change directory to the docker file location. And run the following commands
+- Launch terminal and change directory to the docker file location. And run the following commands.
 To view the container name running:
 ```sh
 docker ps -a
@@ -60,3 +53,10 @@ To execute a command:
 ```sh
 docker exec -u sjoseph <container-name> ls -l /app/notebooks
 ```
+
+## Reference links: 
+<br>https://stackoverflow.com/questions/14093452/grep-only-the-first-match-and-stop 
+<br>https://stackoverflow.com/questions/27701930/how-to-add-users-to-docker-container 
+<br>https://askubuntu.com/questions/487527/give-specific-user-permission-to-write-to-a-folder-using-w-notation 
+<br>https://stackoverflow.com/questions/22049212/docker-copying-files-from-docker-container-to-host 
+<br>https://www.geeksforgeeks.org/copying-files-to-and-from-docker-containers/
