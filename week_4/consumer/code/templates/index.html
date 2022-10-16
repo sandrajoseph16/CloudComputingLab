@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Today's Meal Recommendation</title>
+    <style>
+        body{
+            font-family:Calibri, sans-serif;
+        }
+        div.fooditem{
+            margin:auto;
+            width:30%;
+            padding: 15px;
+            border: 5px solid burlywood;
+            border-radius: 20px;
+        }
+        p.smallfonts{
+            font-size:10px;
+        }
+        .textcenter{
+            text-align: center
+        }
+    </style>
+</head>
+<body>
+    <div class="fooditem">
+        <h2 class="textcenter">Today's Meal Recommendation</h2>
+        <h3 class="textcenter">Hello there! <br /> You can try, {{ food_name }} for a price of {{ price }}</h3> 
+        <img src="{{image}}" style="max-width: 518px;width: 100%;height:auto" />
+    </div>
+    <div class="textcenter">
+        <p class="smallfonts">Image credits: <a href="https://www.thecheesecakefactory.com/menu">The Cheesecake Factory</a></p>
+    </div>
+</body>
+</html>
