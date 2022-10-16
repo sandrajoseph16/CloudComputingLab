@@ -1,6 +1,6 @@
-## docker-compose to build an ‘api’ service and a “consumer” service using Flask
+# docker-compose to build an ‘api’ service and a “consumer” service using Flask
 
-# This application gives meals suggestion from a list of meals in the JSON file
+## This application gives meals suggestion from a list of meals in the JSON file
 
 - To run this download the directory on your local 
 - Navigate to folder location 
