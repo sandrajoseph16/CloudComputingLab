@@ -12,3 +12,19 @@ cd week_4
 docker-compose up
 ```
 - Go to http://localhost:80
+- Close the docker compose and check the volumes: Run the following command for each docker:
+- Run week_4-api docker
+```sh
+docker run -it -p5000:5000 -v $(pwd)/api/code:/app week_4-api /bin/bash
+pwd
+ls
+```
+all files in code will be listed
+
+- Exit and - Run week_4-consumer docker:
+```sh
+docker run -it -p5000:5000 -v $(pwd)/api/code:/app week_4-consumer /bin/bash
+pwd
+ls
+```
+all files in code will be listed
