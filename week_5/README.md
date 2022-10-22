@@ -2,7 +2,7 @@
 
 ## This application gives meals suggestion from a list of meals in a Postgres DB
 
-- This folder contains mounted volumes of Postgres database called 'pgdata' and the Postgres DBAdmin session called 'pgadmin'
+This folder contains mounted volumes of Postgres database called 'pgdata' and the Postgres DBAdmin session called 'pgadmin'
 
 - To run this download the file on your local 
 - Navigate to folder location 
